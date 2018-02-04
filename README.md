@@ -3,6 +3,9 @@
 ### 구현 환경
 - RedHat Linux 6.2, GCC 컴파일러
 
+### 실행 화면
+![playing-tetris.png](images/playing-tetris.png)
+
 ### 구현한 것
 - ↑키 누르면 돌아감
 - ←→ 키 누르면 움직임
