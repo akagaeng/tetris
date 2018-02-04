@@ -60,7 +60,7 @@ sleep(1)은 시스템 자체를 일정 시간동안 멈추는 함수인데, slee
 <br>
 <br>
 
-### 소스코드: [tetris.c](https://github.com/akagaeng/self-study/blob/master/Tetris/code/tetris.c)
+### 소스코드: [tetris.c](https://github.com/akagaeng/tetris/blob/master/code/tetris.c)
 
 ```
 #include <ncurses.h>
