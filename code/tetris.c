@@ -241,7 +241,9 @@ void striked_block()
     // 바로 아랫줄에 블록이 있는 경우에 한번 더 아래 키를 누르면 쌓임
     // 스페이스바 누른 때에는 한번만 벽or쌓인블록 만나면 블록 쌓으면 됨
     // 이때에 y가 한칸 덜 증가하므로 gap_var를 하나 줄여줌으로써 ↓키 누를때와 구별해줌
-    this_score = 100 score = score + this_score + line_score;
+    this_score = 100;
+    score = score + this_score + line_score;
+
     if (high_score <= score)
     {
       high_score = score;
@@ -346,7 +348,7 @@ void line_check()
 {
   int remove_line;
 
-  for (i = 0; remove_line = 0; i < 22; i++)
+  for (i = 0, remove_line = 0; i < 22; i++)
   {
     line_cnt[i] = 0;
     for (j = 0; j < 16; j++)
@@ -355,7 +357,8 @@ void line_check()
       { //각 라인의 블록수를 배열에 저장
         line_cnt[i]++;
       }
-   if( line_cnt[i]==15{ // 0부터 증가시킨 어떤 라인의 블록수가 15개(한줄 전체)이면
+      if (line_cnt[i] == 15)
+      { // 0부터 증가시킨 어떤 라인의 블록수가 15개(한줄 전체)이면
         level_cnt++;
         remove_line++;
         if (level_cnt % 2 == 0)
@@ -414,7 +417,7 @@ void line_check()
             } // make top line "." not " "
           }
         }
-	}
+      }
     }
   }
   refresh();
@@ -568,7 +571,9 @@ int main()
         mvprintw(7, 38, "  GAME RESTART    ");
         mvprintw(8, 38, "    E N J O Y     ");
         mvprintw(9, 38, "   T E T R I S    ");
+        break;
       default:
+        break;
 
       } // end switch(ch)
     }   // end else
